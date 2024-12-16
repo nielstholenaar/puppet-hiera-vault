@@ -1,16 +1,11 @@
 source 'http://rubygems.org'
 
 group :test do
-  if puppetversion = ENV['PUPPET_GEM_VERSION']
-    gem 'puppet', puppetversion, :require => false
-  else
-    gem 'puppet', ENV['PUPPET_VERSION'] || '~> 6'
-  end
-
-  gem 'json', ">= 2.3.0"
-  gem 'json_pure', ">= 2.3.1"
+ 
+  gem 'puppet', '>= 8'
+  gem 'json', ">= 2.9"
+  gem 'json_pure', ">= 2.8.1"
   gem 'safe_yaml'
-
   gem 'rake'
   gem 'puppet-lint'
   gem 'rspec'
@@ -20,7 +15,7 @@ group :test do
   gem 'simplecov'
   gem 'simplecov-console'
   gem 'metadata-json-lint'
-  gem 'vault', '>= 0.13.0'
+  gem 'vault', '>= 0.18'
   gem 'debouncer'
 end
 
